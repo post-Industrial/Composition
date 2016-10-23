@@ -46,15 +46,15 @@ function wrapAsync(callback) {
 }
 
 function readConfig(path,charset,callback) {
-fs.readFile(path,charset,(err,configLocal) => {
-    if (!err) {
-        console.log("Read Done");
-        console.log(configLocal + '\n');
-        callback(null,configLocal);
-    }
-    else
-    console.log("err 0");
-});
+    fs.readFile(path,charset,(err,configLocal) => {
+        if (!err) {
+            console.log("Read Done");
+            console.log(configLocal + '\n');
+            callback(null,configLocal);
+        }
+        else
+        console.log("err 0");
+    });
 }
 function parseConfing(config,callback){
     config = config.toLowerCase();
@@ -63,7 +63,6 @@ function parseConfing(config,callback){
         console.log(config+ '\n');
         callback(null,config);
     })
-    
 }
 function preProcess(config,callback){
     // Do smth crazy
